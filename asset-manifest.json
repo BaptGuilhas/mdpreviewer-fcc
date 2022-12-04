@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/mdpreviewer-fcc/static/css/main.bd59523a.css",
+    "main.js": "/mdpreviewer-fcc/static/js/main.46f6bd89.js",
+    "index.html": "/mdpreviewer-fcc/index.html",
+    "main.bd59523a.css.map": "/mdpreviewer-fcc/static/css/main.bd59523a.css.map",
+    "main.46f6bd89.js.map": "/mdpreviewer-fcc/static/js/main.46f6bd89.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bd59523a.css",
+    "static/js/main.46f6bd89.js"
+  ]
+}

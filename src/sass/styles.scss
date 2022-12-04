@@ -1,0 +1,118 @@
+$primary:       hsl(196, 45%, 65%);
+$secondary:     hsl(355, 45%, 65%);
+$success:       hsl(050, 45%, 65%);
+$bck-darken : darken($primary, 10);
+$bck-lighten: lighten($primary, 10);
+
+@import "./bootstrap/bootstrap.scss";
+@import "./bootstrap/containers.scss";
+@import "./bootstrap/mixins";
+
+.editor-container {
+  width: 48%; 
+  height: 100%;
+}
+.previewer-container {
+  width: 48%;
+  height: 100%;
+}
+
+#main {
+  background-color: #{$primary};
+  height: 100%;
+  min-height: 100vh;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.windows {
+  border: 0;
+  padding: 0 0;
+  background-color: $bck-lighten;
+  box-shadow: 0px 0px 10px $dark;
+  border : 1px solid $gray-700;
+  width: 47%;
+  height: 100%;
+}
+
+.windows-header {
+  border-bottom : 1px solid $gray-700;
+  background: linear-gradient(0deg, darken($bck-darken,10) 0%, $bck-darken 50%, $bck-darken 80%, darken($bck-darken,0) 100%);
+  h2 {
+    font-weight: 900;
+    font-size: x-large;
+  }
+  width: 100%;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+.windows-header {
+  @if (lightness($bck-darken) > 30% or lightness($bck-lighten) > 30%) {
+    color: $gray-900;
+  } @else {
+    color: $gray-400;
+  };
+}
+
+ #editor {
+  height: 85vh;
+  width: 100%;
+  display: block;
+  font-family:monospace;
+  font-weight: 500;
+  font-size: small;
+  background-color: $bck-lighten;
+  text-align: left;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  &:focus {
+    outline: none !important;
+  }
+}
+#previewer {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  text-align: left;
+  background-color: $bck-lighten;
+  border-top: 1px solid $gray-700;;
+  height: 85vh;
+  width: 100%;
+  a {
+    color: $gray-700;
+  }
+}
+
+#previewer, #editor {
+  padding : 5px;
+}
+table, th, td {
+  border: 1px solid;
+  margin: 2px;
+}
+pre, code {
+  background-color: $gray-300;
+}
+h1 {
+  border-bottom: 3px solid ;
+}
+
+blockquote {
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: rgb(48, 42, 42);
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+img {
+  width: 80%;
+}

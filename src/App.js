@@ -24,7 +24,7 @@ function App() {
         <h2>Previewer</h2>
       </div>
       <div 
-        id="previewer"
+        id="preview"
           dangerouslySetInnerHTML = {{
             __html: marked(text)
           }} 

@@ -72,7 +72,7 @@ $bck-lighten: lighten($primary, 10);
     outline: none !important;
   }
 }
-#previewer {
+#preview {
   overflow-y: scroll;
   overflow-x: hidden;
   text-align: left;
@@ -85,7 +85,7 @@ $bck-lighten: lighten($primary, 10);
   }
 }
 
-#previewer, #editor {
+#preview, #editor {
   padding : 5px;
 }
 table, th, td {
